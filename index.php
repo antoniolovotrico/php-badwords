@@ -1,6 +1,6 @@
 <?php 
 $para = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod recusandae id ipsam, eaque consequuntur facere fuga, adipisci excepturi eveniet sed enim suscipit eligendi, debitis reiciendis iusto velit illum. Deserunt, quia.";
-
+$badword = $_GET['badword'];
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +12,6 @@ $para = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod recusand
         <title>php-badwords</title>
     </head>
     <body>
-        <p><?php echo str_replace('ipsum'.$_GET['ipsum'], '***', $para) . strlen($para); ?></p>
+        <p><?php echo str_replace($badword, '***', $para) . strlen($para); ?></p>
     </body>
 </html>
